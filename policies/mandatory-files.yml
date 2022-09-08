@@ -6,8 +6,7 @@ description: this policy will ensure the presence of important files in Microsof
 resource: repository
 where:
 - |
-  repository.name.equals("alsdfjalsdjfasdflajs", StringComparison.InvariantCultureIgnoreCase) 
-  || repository.name.equals("powershell-intune-samples", StringComparison.InvariantCultureIgnoreCase)
+  repository.name.equals("powershell-intune-samples", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("python-security-rest-sample", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-sdk-php", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-training-phpapp", StringComparison.InvariantCultureIgnoreCase)
