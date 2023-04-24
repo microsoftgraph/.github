@@ -3,16 +3,15 @@
 
 # metadata
 name: mandatory files policy
-description: this policy will ensure the presence of important files in Microsoft Graph project repositories.
+description: This policy will ensure the presence of important files in public Microsoft Graph repositories.
 
 # filters
 resource: repository
 where:
 - |
-  || repository.name.equals("agora-plantuml-server", StringComparison.InvariantCultureIgnoreCase)
+  repository.name.equals("aspnet-snippets-sample", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("aspnetcore-search-sample", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("aspnetcore-webhooks-sample", StringComparison.InvariantCultureIgnoreCase)
-  || repository.name.equals("aspnet-snippets-sample", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("assign-to-author", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("botframework-csharp-approvalbot-sample", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("changelog-link-check", StringComparison.InvariantCultureIgnoreCase)
@@ -21,42 +20,28 @@ where:
   || repository.name.equals("dotnet-aad-query-sample", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("dotnetcore-console-sample", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("eol-blocker", StringComparison.InvariantCultureIgnoreCase)
-  || repository.name.equals("get-app-token", StringComparison.InvariantCultureIgnoreCase)
-  || repository.name.equals("github-task-automate", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("g-raph", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("get-app-token", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("group-membership-management", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("group-membership-management-tenant", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("java-spring-webhooks-sample", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("kibali", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("meeting-moderator-sample", StringComparison.InvariantCultureIgnoreCase)
-  || repository.name.equals("mgtLap-TryItOut", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("mgt-react-codetour", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("mgtLap-TryItOut", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("microsoft-graph-comms-samples", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("microsoft-graph-devx-api", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("microsoft-graph-devx-content", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("microsoft-graph-docs", StringComparison.InvariantCultureIgnoreCase)
-  || repository.name.equals("microsoft-graph-docs.de-DE", StringComparison.InvariantCultureIgnoreCase)
-  || repository.name.equals("microsoft-graph-docs.es-ES", StringComparison.InvariantCultureIgnoreCase)
-  || repository.name.equals("microsoft-graph-docs.fr-FR", StringComparison.InvariantCultureIgnoreCase)
-  || repository.name.equals("microsoft-graph-docs.ja-JP", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("microsoft-graph-docs.pt-BR", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("microsoft-graph-docs.ru-RU", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("microsoft-graph-docs.zh-CN", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("microsoft-graph-explorer-v4", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("microsoft-graph-toolkit", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("microsoft-graph-training", StringComparison.InvariantCultureIgnoreCase)
-  || repository.name.equals("microsoft-graph-training.de-DE", StringComparison.InvariantCultureIgnoreCase)
-  || repository.name.equals("microsoft-graph-training.es-ES", StringComparison.InvariantCultureIgnoreCase)
-  || repository.name.equals("microsoft-graph-training.fr-FR", StringComparison.InvariantCultureIgnoreCase)
-  || repository.name.equals("microsoft-graph-training.ja-JP", StringComparison.InvariantCultureIgnoreCase)
-  || repository.name.equals("microsoft-graph-training.pt-BR", StringComparison.InvariantCultureIgnoreCase)
-  || repository.name.equals("microsoft-graph-training.ru-RU", StringComparison.InvariantCultureIgnoreCase)
-  || repository.name.equals("microsoft-graph-training.zh-CN", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-access-files-data", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-access-group-data", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-access-user-data", StringComparison.InvariantCultureIgnoreCase)
-  || repository.name.equals("msgraph-agora", StringComparison.InvariantCultureIgnoreCase)
-  || repository.name.equals("msgraph-agora-api", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-beta-cli", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-beta-sdk-dotnet", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-beta-sdk-go", StringComparison.InvariantCultureIgnoreCase)
@@ -64,7 +49,6 @@ where:
   || repository.name.equals("msgraph-beta-sdk-php", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-beta-sdk-python", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-beta-sdk-ruby", StringComparison.InvariantCultureIgnoreCase)
-  || repository.name.equals("msgraph-beta-sdk-typescript", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-beta-typescript-typings", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-cli", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-cli-core", StringComparison.InvariantCultureIgnoreCase)
@@ -76,7 +60,6 @@ where:
   || repository.name.equals("msgraph-ifttt-sample", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-metadata", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-permissions-scraper", StringComparison.InvariantCultureIgnoreCase)
-  || repository.name.equals("msgraph-ps-compatibility-azuread", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-sample-android", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-sample-angularspa", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-sample-aspnet-core", StringComparison.InvariantCultureIgnoreCase)
@@ -94,10 +77,10 @@ where:
   || repository.name.equals("msgraph-sample-pythondjangoapp", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-sample-reactspa", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-sample-rubyrailsapp", StringComparison.InvariantCultureIgnoreCase)
-  || repository.name.equals("msgraph-samples-dashboard", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-sample-spfx", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-sample-teamsapp-dotnet", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-sample-uwp", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-samples-dashboard", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("MSGraph-SDK-Code-Generator", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-sdk-design", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-sdk-dotnet", StringComparison.InvariantCultureIgnoreCase)
@@ -113,7 +96,6 @@ where:
   || repository.name.equals("msgraph-sdk-powershell", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-sdk-python", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-sdk-python-core", StringComparison.InvariantCultureIgnoreCase)
-  || repository.name.equals("msgraph-sdk-raptor", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-sdk-ruby", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-sdk-ruby-core", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-sdk-serviceissues", StringComparison.InvariantCultureIgnoreCase)
@@ -121,7 +103,6 @@ where:
   || repository.name.equals("msgraph-search-connector-sample", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-tools-migration", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-training-aspnetmvcapp", StringComparison.InvariantCultureIgnoreCase)
-  || repository.name.equals("msgraph-training-botframework-composer", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-training-changenotifications", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-training-dataconnect", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("msgraph-training-dotnet", StringComparison.InvariantCultureIgnoreCase)
@@ -140,17 +121,18 @@ where:
   || repository.name.equals("nodejs-webhooks-sample", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("powershell-aad-samples", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("powershell-intune-samples", StringComparison.InvariantCultureIgnoreCase)
-  || repository.name.equals("typespec-msgraph", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("universalprint-samples", StringComparison.InvariantCultureIgnoreCase)
   || repository.name.equals("windowsupdates-webapplication-sample", StringComparison.InvariantCultureIgnoreCase)
 
-# primitive configuration
+# Configuration for PUBLIC repositories in the Microsoft Graph organization.
 configuration:
     mandatoryFiles:
      autoMergeDays: 10
-     issueTitle: This repo is missing important files
+     issueTitle: This public repo is missing important files
      issueBody:  |
-          There are important files that Microsoft projects should all have that are not present in this repository. A pull request has been opened to add the missing file(s). When the pr is merged this issue will be closed automatically.
+          There are important files that public Microsoft projects should all have that are not present in this repository. A pull request has been opened to add the missing file(s). When the pr is merged this issue will be closed automatically.
+
+          If your repository is no longer public, please open a PR on github.com/microsoftgraph/.github/policies/mandatory-files-public.yml and remove your repository from the list.
 
           Microsoft teams can [learn more about this effort and share feedback](https://docs.opensource.microsoft.com/releasing/maintain/templates/) within the open source guidance available internally.
      prTitle: Adding standard Microsoft template files
@@ -189,6 +171,15 @@ configuration:
         - docs/CODE_OF_CONDUCT
         - .github/CODE_OF_CONDUCT.md
         - .github/CODE_OF_CONDUCT
+      - path: CONTRIBUTING.md
+        prContentLink: https://raw.githubusercontent.com/microsoft/repo-templates/main/projections/azure-samples/CONTRIBUTING.md
+        ignoreCase: true
+        prFilePath: CONTRIBUTING.md
+        otherPaths:
+        - docs/CONTRIBUTING.md
+        - docs/CONTRIBUTING
+        - .github/CONTRIBUTING.md
+        - .github/CONTRIBUTING
      issueReminder:
         firstReminderGapDays: 7
         followUpReminderGapDays: 2
