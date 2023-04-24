@@ -1,10 +1,13 @@
+# Copyright (c) Microsoft Corporation.
+# Licensed under the MIT License.
+
 name: platform_context
 description: The context for GitOps platform, this will drive GitOps specific policies
-owner: 
+owner:
 resource: repository
-where: 
+where:
 configuration:
   platformContext:
     active: true
-onFailure: 
+onFailure:
 onSuccess:

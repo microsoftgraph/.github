@@ -1,0 +1,63 @@
+# Copyright (c) Microsoft Corporation.
+# Licensed under the MIT License.
+
+name: branch_protection_apps_services
+description: Organization branch protection policy for Microsoft Graph applications, services, and tools.
+resource: repository
+where:
+  - |
+    repository.name.contains("agora", StringComparison.InvariantCultureIgnoreCase)
+    || repository.name.equals("kibali", StringComparison.InvariantCultureIgnoreCase)
+    || repository.name.equals("csdl-diagrams", StringComparison.InvariantCultureIgnoreCase)
+    || repository.name.startsWith("microsoft-graph-devx", StringComparison.InvariantCultureIgnoreCase)
+    || repository.name.equals("microsoft-graph-explorer-v4", StringComparison.InvariantCultureIgnoreCase)
+    || repository.name.equals("msgraph-developer-proxy", StringComparison.InvariantCultureIgnoreCase)
+    || repository.name.equals("msgraph-github-content-utility", StringComparison.InvariantCultureIgnoreCase)
+    || repository.name.equals("msgraph-metadata", StringComparison.InvariantCultureIgnoreCase)
+    || repository.name.equals("msgraph-permissions-scraper", StringComparison.InvariantCultureIgnoreCase)
+    || repository.name.equals("msgraph-ps-compatibility-azuread", StringComparison.InvariantCultureIgnoreCase)
+    || repository.name.equals("msgraph-samples-dashboard", StringComparison.InvariantCultureIgnoreCase)
+    || repository.name.equals("MSGraph-SDK-Code-Generator", StringComparison.InvariantCultureIgnoreCase)
+configuration:
+  branchProtectionRules:
+  - branchNamePattern: main
+    requiredApprovingReviewsCount:
+      min: 1
+    # Must have a CODEOWNER approve for the PR to be merged.
+    requireCodeOwnersReview: true
+    # Require status checks to pass before merging. TODO: this value should be true, we should work to support this.
+    # Used with the requiredStatusChecks setting to specify which checks must pass for the PR to be merged.
+    requiresStrictStatusChecks: false
+    # TODO: all commits should be signed. We need to get everyone signing their commits.
+    requiresCommitSignatures: false
+    # Dismiss stale pull request approvals when new commits are pushed
+    dismissStaleReviews: true
+    # Require conversation resolution before merging. Address all concerns, and resolve in the GitHub PR UI.
+    requiresConversationResolution: true
+  - branchNamePattern: "master"
+    requiredApprovingReviewsCount:
+      min: 1
+    requireCodeOwnersReview: true
+    requiresStrictStatusChecks: false
+    requiresCommitSignatures: false
+    dismissStaleReviews: true
+    requiresConversationResolution: true
+    dismissStaleReviews: true
+  - branchNamePattern: "dev"
+    requiredApprovingReviewsCount:
+      min: 1
+    requireCodeOwnersReview: true
+    requiresStrictStatusChecks: false
+    requiresCommitSignatures: false
+    dismissStaleReviews: true
+    requiresConversationResolution: true
+    dismissStaleReviews: true
+  - branchNamePattern: "[Rr]elease/*"
+    requiredApprovingReviewsCount:
+      min: 1
+    requireCodeOwnersReview: true
+    requiresStrictStatusChecks: false
+    requiresCommitSignatures: false
+    dismissStaleReviews: true
+    requiresConversationResolution: true
+    dismissStaleReviews: true

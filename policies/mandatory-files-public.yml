@@ -1,0 +1,185 @@
+# Copyright (c) Microsoft Corporation.
+# Licensed under the MIT License.
+
+# metadata
+name: mandatory files policy
+description: This policy will ensure the presence of important files in public Microsoft Graph repositories.
+
+# filters
+resource: repository
+where:
+- |
+  repository.name.equals("aspnet-snippets-sample", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("aspnetcore-search-sample", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("aspnetcore-webhooks-sample", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("assign-to-author", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("botframework-csharp-approvalbot-sample", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("changelog-link-check", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("csdl-diagrams", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("dataconnect-solutions", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("dotnet-aad-query-sample", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("dotnetcore-console-sample", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("eol-blocker", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("g-raph", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("get-app-token", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("group-membership-management", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("group-membership-management-tenant", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("java-spring-webhooks-sample", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("kibali", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("meeting-moderator-sample", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("mgt-react-codetour", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("mgtLap-TryItOut", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("microsoft-graph-comms-samples", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("microsoft-graph-devx-api", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("microsoft-graph-devx-content", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("microsoft-graph-docs", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("microsoft-graph-docs.pt-BR", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("microsoft-graph-docs.ru-RU", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("microsoft-graph-docs.zh-CN", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("microsoft-graph-explorer-v4", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("microsoft-graph-toolkit", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("microsoft-graph-training", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-access-files-data", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-access-group-data", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-access-user-data", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-beta-cli", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-beta-sdk-dotnet", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-beta-sdk-go", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-beta-sdk-java", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-beta-sdk-php", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-beta-sdk-python", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-beta-sdk-ruby", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-beta-typescript-typings", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-cli", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-cli-core", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-community-samples", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-connectors-sdk", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-developer-proxy", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-dotnet-interactive-extension", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-github-content-utility", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-ifttt-sample", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-metadata", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-permissions-scraper", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sample-android", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sample-angularspa", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sample-aspnet-core", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sample-azurefunction-csharp", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sample-blazor-clientside", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sample-botframework", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sample-deltaquery", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sample-ios-objectivec", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sample-ios-swift", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sample-javascriptspa", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sample-maui", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sample-nodeexpressapp", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sample-office-addin", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sample-phpapp", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sample-pythondjangoapp", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sample-reactspa", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sample-rubyrailsapp", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sample-spfx", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sample-teamsapp-dotnet", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sample-uwp", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-samples-dashboard", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("MSGraph-SDK-Code-Generator", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sdk-design", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sdk-dotnet", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sdk-dotnet-contrib", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sdk-dotnet-core", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sdk-go", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sdk-go-core", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sdk-java", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sdk-java-core", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sdk-javascript", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sdk-php", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sdk-php-core", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sdk-powershell", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sdk-python", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sdk-python-core", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sdk-ruby", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sdk-ruby-core", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sdk-serviceissues", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-sdk-typescript", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-search-connector-sample", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-tools-migration", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-training-aspnetmvcapp", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-training-changenotifications", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-training-dataconnect", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-training-dotnet", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-training-go", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-training-java", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-training-javascript", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-training-optimize-data-usage", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-training-optimize-network-traffic", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-training-php", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-training-powerautomate", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-training-powershell", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-training-python", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-training-react-native", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-training-typescript", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("msgraph-typescript-typings", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("nodejs-webhooks-sample", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("powershell-aad-samples", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("powershell-intune-samples", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("universalprint-samples", StringComparison.InvariantCultureIgnoreCase)
+  || repository.name.equals("windowsupdates-webapplication-sample", StringComparison.InvariantCultureIgnoreCase)
+
+# Configuration for PUBLIC repositories in the Microsoft Graph organization.
+configuration:
+    mandatoryFiles:
+     autoMergeDays: 10
+     issueTitle: This public repo is missing important files
+     issueBody:  |
+          There are important files that public Microsoft projects should all have that are not present in this repository. A pull request has been opened to add the missing file(s). When the pr is merged this issue will be closed automatically.
+
+          If your repository is no longer public, please open a PR on github.com/microsoftgraph/.github/policies/mandatory-files-public.yml and remove your repository from the list.
+
+          Microsoft teams can [learn more about this effort and share feedback](https://docs.opensource.microsoft.com/releasing/maintain/templates/) within the open source guidance available internally.
+     prTitle: Adding standard Microsoft template files
+     prBody:  |
+           Please accept this contribution adding one or more of the following files
+           - SECURITY.MD :lock: file to help the community understand the security policy and how to safely report security issues. GitHub uses the presence of this file to light-up security reminders and a link to the file. This pull request commits the latest official SECURITY.MD file from https://github.com/microsoft/repo-templates/blob/main/shared/SECURITY.md.
+           - LICENSE file to specify the license under which the project is made available. GitHub uses the presence of this file to light-up license information in the UI. This pull request commits the latest official LICENSE file from https://github.com/microsoft/repo-templates/blob/main/shared/LICENSE.
+           - CODE_OF_CONDUCT.md file to specify the code of conduct for the project. GitHub uses the presence of this file to light-up code of conduct information in the UI. This pull request commits the latest official CODE_OF_CONDUCT.md file from https://github.com/microsoft/repo-templates/blob/main/shared/CODE_OF_CONDUCT.md.
+
+           Microsoft teams can [learn more about this effort and share feedback](https://docs.opensource.microsoft.com/releasing/maintain/templates/) within the open source guidance available internally.
+     file:
+      - path: SECURITY.md
+        prContentLink: https://raw.githubusercontent.com/microsoft/repo-templates/main/shared/SECURITY.md
+        ignoreCase: true
+        prFilePath: SECURITY.md
+        otherPaths:
+        - docs/SECURITY.md
+        - .github/SECURITY.md
+        - docs/SECURITY
+        - .github/SECURITY
+      - path: LICENSE
+        prContentLink: https://raw.githubusercontent.com/microsoft/repo-templates/main/shared/LICENSE
+        ignoreCase: true
+        prFilePath: LICENSE
+        otherPaths:
+        - docs/LICENSE.md
+        - docs/LICENSE
+        - .github/LICENSE.md
+        - .github/LICENSE
+      - path: CODE_OF_CONDUCT.md
+        prContentLink: https://raw.githubusercontent.com/microsoft/repo-templates/main/shared/CODE_OF_CONDUCT.md
+        ignoreCase: true
+        prFilePath: CODE_OF_CONDUCT.md
+        otherPaths:
+        - docs/CODE_OF_CONDUCT.md
+        - docs/CODE_OF_CONDUCT
+        - .github/CODE_OF_CONDUCT.md
+        - .github/CODE_OF_CONDUCT
+      - path: CONTRIBUTING.md
+        prContentLink: https://raw.githubusercontent.com/microsoft/repo-templates/main/projections/azure-samples/CONTRIBUTING.md
+        ignoreCase: true
+        prFilePath: CONTRIBUTING.md
+        otherPaths:
+        - docs/CONTRIBUTING.md
+        - docs/CONTRIBUTING
+        - .github/CONTRIBUTING.md
+        - .github/CONTRIBUTING
+     issueReminder:
+        firstReminderGapDays: 7
+        followUpReminderGapDays: 2
