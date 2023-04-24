@@ -1,6 +1,9 @@
+# Copyright (c) Microsoft Corporation.
+# Licensed under the MIT License.
+
 # metadata
 name: mandatory files policy
-description: this policy will ensure the presence of important files in Microsoft project repositories.
+description: this policy will ensure the presence of important files in Microsoft Graph project repositories.
 
 # filters
 resource: repository
@@ -150,9 +153,12 @@ configuration:
           There are important files that Microsoft projects should all have that are not present in this repository. A pull request has been opened to add the missing file(s). When the pr is merged this issue will be closed automatically.
 
           Microsoft teams can [learn more about this effort and share feedback](https://docs.opensource.microsoft.com/releasing/maintain/templates/) within the open source guidance available internally.
-     prTitle: Adding Microsoft SECURITY.MD
+     prTitle: Adding standard Microsoft template files
      prBody:  |
-           Please accept this contribution adding the standard Microsoft SECURITY.MD :lock: file to help the community understand the security policy and how to safely report security issues. GitHub uses the presence of this file to light-up security reminders and a link to the file. This pull request commits the latest official SECURITY.MD file from https://github.com/microsoft/repo-templates/blob/main/shared/SECURITY.md.
+           Please accept this contribution adding one or more of the following files
+           - SECURITY.MD :lock: file to help the community understand the security policy and how to safely report security issues. GitHub uses the presence of this file to light-up security reminders and a link to the file. This pull request commits the latest official SECURITY.MD file from https://github.com/microsoft/repo-templates/blob/main/shared/SECURITY.md.
+           - LICENSE file to specify the license under which the project is made available. GitHub uses the presence of this file to light-up license information in the UI. This pull request commits the latest official LICENSE file from https://github.com/microsoft/repo-templates/blob/main/shared/LICENSE.
+           - CODE_OF_CONDUCT.md file to specify the code of conduct for the project. GitHub uses the presence of this file to light-up code of conduct information in the UI. This pull request commits the latest official CODE_OF_CONDUCT.md file from https://github.com/microsoft/repo-templates/blob/main/shared/CODE_OF_CONDUCT.md.
 
            Microsoft teams can [learn more about this effort and share feedback](https://docs.opensource.microsoft.com/releasing/maintain/templates/) within the open source guidance available internally.
      file:
@@ -163,6 +169,26 @@ configuration:
         otherPaths:
         - docs/SECURITY.md
         - .github/SECURITY.md
+        - docs/SECURITY
+        - .github/SECURITY
+      - path: LICENSE
+        prContentLink: https://raw.githubusercontent.com/microsoft/repo-templates/main/shared/LICENSE
+        ignoreCase: true
+        prFilePath: LICENSE
+        otherPaths:
+        - docs/LICENSE.md
+        - docs/LICENSE
+        - .github/LICENSE.md
+        - .github/LICENSE
+      - path: CODE_OF_CONDUCT.md
+        prContentLink: https://raw.githubusercontent.com/microsoft/repo-templates/main/shared/CODE_OF_CONDUCT.md
+        ignoreCase: true
+        prFilePath: CODE_OF_CONDUCT.md
+        otherPaths:
+        - docs/CODE_OF_CONDUCT.md
+        - docs/CODE_OF_CONDUCT
+        - .github/CODE_OF_CONDUCT.md
+        - .github/CODE_OF_CONDUCT
      issueReminder:
         firstReminderGapDays: 7
         followUpReminderGapDays: 2
