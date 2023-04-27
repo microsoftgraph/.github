@@ -1,0 +1,21 @@
+# Copyright (c) Microsoft Corporation.
+# Licensed under the MIT License.
+
+name: Advanced Security Settings
+description: SDL Requirements
+
+resource: repository
+where:
+  - repository.name.equals("microsoft-graph-toolkit", StringComparison.InvariantCultureIgnoreCase)
+configuration:
+    advancedSecurity:
+        # Enable code and secret scanning on all repositories
+        secretScanning: true 
+        # Prevent push of secrets, requires secretScanning: true 
+        secretScanningPushProtection: true
+        # If a dependency has been added or modified, check for vulnerabilities.
+        enablePrCheck: true
+        # PR check will fail if the severity of the code, secret, or dependency scan is Moderate, High, or Critical
+        failOnSeverity: Moderate
+        # Specify exceptions  to TEMPORARILY allow a specific vulnerability. 
+        allowGhasVulnerability: []
