@@ -1,0 +1,71 @@
+# Copyright (c) Microsoft Corporation.
+# Licensed under the MIT License.
+
+# metadata
+name: mandatory files policy
+description: This policy will ensure the presence of important files in public Microsoft Graph repositories.
+
+# filters
+resource: repository
+where:
+  - repository.name.equals("microsoft-graph-toolkit", StringComparison.InvariantCultureIgnoreCase)
+
+# Configuration for PUBLIC repositories in the Microsoft Graph organization.
+configuration:
+    mandatoryFiles:
+     autoMergeDays: 10
+     issueTitle: This public repo is missing important files
+     issueBody:  |
+          There are important files that public Microsoft projects should all have that are not present in this repository. A pull request has been opened to add the missing file(s). When the pr is merged this issue will be closed automatically.
+
+          If your repository is no longer public, please open a PR on github.com/microsoftgraph/.github/policies/mandatory-files-public.yml and remove your repository from the list.
+
+          Microsoft teams can [learn more about this effort and share feedback](https://docs.opensource.microsoft.com/releasing/maintain/templates/) within the open source guidance available internally.
+     prTitle: Adding standard Microsoft template files
+     prBody:  |
+           Please accept this contribution adding one or more of the following files
+           - SECURITY.MD :lock: file to help the community understand the security policy and how to safely report security issues. GitHub uses the presence of this file to light-up security reminders and a link to the file. This pull request commits the latest official SECURITY.MD file from https://github.com/microsoft/repo-templates/blob/main/shared/SECURITY.md.
+           - LICENSE file to specify the license under which the project is made available. GitHub uses the presence of this file to light-up license information in the UI. This pull request commits the latest official LICENSE file from https://github.com/microsoft/repo-templates/blob/main/shared/LICENSE.
+           - CODE_OF_CONDUCT.md file to specify the code of conduct for the project. GitHub uses the presence of this file to light-up code of conduct information in the UI. This pull request commits the latest official CODE_OF_CONDUCT.md file from https://github.com/microsoft/repo-templates/blob/main/shared/CODE_OF_CONDUCT.md.
+
+           Microsoft teams can [learn more about this effort and share feedback](https://docs.opensource.microsoft.com/releasing/maintain/templates/) within the open source guidance available internally.
+     file:
+      - path: SECURITY.md
+        prContentLink: https://raw.githubusercontent.com/microsoft/repo-templates/main/shared/SECURITY.md
+        ignoreCase: true
+        prFilePath: SECURITY.md
+        otherPaths:
+        - docs/SECURITY.md
+        - .github/SECURITY.md
+        - docs/SECURITY
+        - .github/SECURITY
+      - path: LICENSE
+        prContentLink: https://raw.githubusercontent.com/microsoft/repo-templates/main/shared/LICENSE
+        ignoreCase: true
+        prFilePath: LICENSE
+        otherPaths:
+        - docs/LICENSE.md
+        - docs/LICENSE
+        - .github/LICENSE.md
+        - .github/LICENSE
+      - path: CODE_OF_CONDUCT.md
+        prContentLink: https://raw.githubusercontent.com/microsoft/repo-templates/main/shared/CODE_OF_CONDUCT.md
+        ignoreCase: true
+        prFilePath: CODE_OF_CONDUCT.md
+        otherPaths:
+        - docs/CODE_OF_CONDUCT.md
+        - docs/CODE_OF_CONDUCT
+        - .github/CODE_OF_CONDUCT.md
+        - .github/CODE_OF_CONDUCT
+      - path: CONTRIBUTING.md
+        prContentLink: https://raw.githubusercontent.com/microsoft/repo-templates/main/projections/azure-samples/CONTRIBUTING.md
+        ignoreCase: true
+        prFilePath: CONTRIBUTING.md
+        otherPaths:
+        - docs/CONTRIBUTING.md
+        - docs/CONTRIBUTING
+        - .github/CONTRIBUTING.md
+        - .github/CONTRIBUTING
+     issueReminder:
+        firstReminderGapDays: 7
+        followUpReminderGapDays: 2
