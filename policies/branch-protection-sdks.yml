@@ -2,7 +2,7 @@
 # Licensed under the MIT License.
 
 name: branch_protection_sdks
-description: Organization branch protection policy for Microsoft Graph SDKs
+description: Organization branch protection policy for Microsoft Graph SDK repositories
 resource: repository
 where:
   - repository.name.equals("microsoft-graph-toolkit", StringComparison.InvariantCultureIgnoreCase)
