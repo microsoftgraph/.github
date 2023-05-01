@@ -2,7 +2,7 @@
 # Licensed under the MIT License.
 
 name: Advanced Security Settings
-description: SDL Requirements
+description: SDL requirements for Microsoft Graph organization.
 
 resource: repository
 where:
