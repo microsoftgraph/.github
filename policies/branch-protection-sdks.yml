@@ -26,7 +26,7 @@ configuration:
     requiredApprovingReviewsCount:
       min: 1
     requireCodeOwnersReview: true
-    requiresStrictStatusChecks: false
+    requiresStrictStatusChecks: true
     requiresCommitSignatures: false
     dismissStaleReviews: true
     requiresConversationResolution: true
