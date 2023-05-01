@@ -15,7 +15,7 @@ configuration:
     requireCodeOwnersReview: true
     # Require status checks to pass before merging. TODO: this value should be true, we should work to support this.
     # Used with the requiredStatusChecks setting to specify which checks must pass for the PR to be merged.
-    requiresStrictStatusChecks: false
+    requiresStrictStatusChecks: true
     # TODO: all commits should be signed. We need to get everyone signing their commits.
     requiresCommitSignatures: false
     # Dismiss stale pull request approvals when new commits are pushed
@@ -44,7 +44,7 @@ configuration:
     requiredApprovingReviewsCount:
       min: 1
     requireCodeOwnersReview: true
-    requiresStrictStatusChecks: false
+    requiresStrictStatusChecks: true
     requiresCommitSignatures: false
     dismissStaleReviews: true
     requiresConversationResolution: true
