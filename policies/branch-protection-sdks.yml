@@ -2,7 +2,7 @@
 # Licensed under the MIT License.
 
 name: branch_protection_sdks
-description: Organization branch protection policy for Microsoft Graph SDKs
+description: Organization branch protection policy for Microsoft Graph SDK repositories
 resource: repository
 where:
   - repository.name.equals("microsoft-graph-toolkit", StringComparison.InvariantCultureIgnoreCase)
@@ -15,7 +15,7 @@ configuration:
     requireCodeOwnersReview: true
     # Require status checks to pass before merging. TODO: this value should be true, we should work to support this.
     # Used with the requiredStatusChecks setting to specify which checks must pass for the PR to be merged.
-    requiresStrictStatusChecks: true
+    requiresStrictStatusChecks: false
     # TODO: all commits should be signed. We need to get everyone signing their commits.
     requiresCommitSignatures: false
     # Dismiss stale pull request approvals when new commits are pushed
@@ -26,7 +26,7 @@ configuration:
     requiredApprovingReviewsCount:
       min: 1
     requireCodeOwnersReview: true
-    requiresStrictStatusChecks: true
+    requiresStrictStatusChecks: false
     requiresCommitSignatures: false
     dismissStaleReviews: true
     requiresConversationResolution: true
@@ -44,7 +44,7 @@ configuration:
     requiredApprovingReviewsCount:
       min: 1
     requireCodeOwnersReview: true
-    requiresStrictStatusChecks: true
+    requiresStrictStatusChecks: false
     requiresCommitSignatures: false
     dismissStaleReviews: true
     requiresConversationResolution: true
