@@ -30,7 +30,6 @@ configuration:
     requiresCommitSignatures: false
     dismissStaleReviews: true
     requiresConversationResolution: true
-    dismissStaleReviews: true
   - branchNamePattern: "dev"
     requiredApprovingReviewsCount:
       min: 1
@@ -39,7 +38,6 @@ configuration:
     requiresCommitSignatures: false
     dismissStaleReviews: true
     requiresConversationResolution: true
-    dismissStaleReviews: true
   - branchNamePattern: "[Rr]elease/*"
     requiredApprovingReviewsCount:
       min: 1
@@ -48,4 +46,3 @@ configuration:
     requiresCommitSignatures: false
     dismissStaleReviews: true
     requiresConversationResolution: true
-    dismissStaleReviews: true
