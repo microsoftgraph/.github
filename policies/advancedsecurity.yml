@@ -5,8 +5,7 @@ name: Advanced Security Settings
 description: SDL requirements for Microsoft Graph organization.
 
 resource: repository
-where:
-  - repository.name.equals("microsoft-graph-toolkit", StringComparison.InvariantCultureIgnoreCase)
+
 configuration:
     advancedSecurity:
         # Enable code and secret scanning on all repositories
