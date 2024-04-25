@@ -108,6 +108,7 @@ configuration:
          - learn-build-service-ppe[bot]
          - learn-build-service-prod[bot]
          - snippet-gen-pull-automation[bot]
+         - release-please[bot]
       prohibitedCompanies:
          - msft
          - microsoft
