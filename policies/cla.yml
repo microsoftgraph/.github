@@ -109,6 +109,7 @@ configuration:
          - learn-build-service-prod[bot]
          - snippet-gen-pull-automation[bot]
          - release-please[bot]
+         - microsoft-graph-devx-bot[bot]
       prohibitedCompanies:
          - msft
          - microsoft
