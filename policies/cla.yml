@@ -12,6 +12,7 @@ configuration:
       bypassOrgs:
          - bloomberg
       bypassUsers:
+         - release-please-token-provider[bot]
          - dependabot[bot]
          - greenkeeper[bot]
          - dotnet-maestro[bot]
